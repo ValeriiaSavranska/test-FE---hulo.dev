@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.btn-prev {
+  position: absolute;
+  left: 5px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-next {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.svg-btn {
+  fill: #adadadcd;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+.btn:disabled .svg-btn {
+  fill: #333333cd;
+}
+
+.slide-container {
+  display: flex;
+  flex-wrap: nowrap;
+
+  transition: transform 0.5s ease-out;
+}
+
+.move-left {
+  transform: translateX(-100%);
+}
+
+.slide {
+  width: 25%;
+  padding: 10px;
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.svg-close {
+  fill: #ffffff;
+}
+
+#videoPlayer {
+  width: 640px;
+  height: 360px;
+}
+
+.pagination-item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #828282;
+
+  cursor: pointer;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 10px;
+}
+.pagination-item--active {
+  background-color: #ffffff;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test hulo.dev</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="slider">
+        <button type="button" class="btn btn-prev">
+          <svg width="40" height="40" class="svg-btn">
+            <use href="./images/symbol-defs.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <div id="slideContainer" class="slide-container"></div>
+        <button type="button" class="btn btn-next">
+          <svg width="40" height="40" class="svg-btn">
+            <use href="./images/symbol-defs.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close">
+            <svg width="20" height="20" class="svg-close">
+              <use href="./images/symbol-defs.svg#icon-cross"></use>
+            </svg>
+          </span>
+          <div id="videoPlayer"></div>
+          <div class="pagination"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
